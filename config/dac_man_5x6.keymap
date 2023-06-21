@@ -5,9 +5,19 @@
 #define DEFAULT 0
 #define RAISE   1
 #define LOWER   2
+#define ADJUST   3
 
 / {
-    keymap {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        tri_layer {
+            if-layers = <LOWER RAISE>;
+            then-layer = <ADJUST>;
+        };
+    };
+
+keymap {
         compatible = "zmk,keymap";
 
         default_layer {
