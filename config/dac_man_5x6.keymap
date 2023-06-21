@@ -53,7 +53,7 @@
    &trans  &kp LEFT      &kp UP  &kp DOWN   &kp RIGHT  &kp C_VOL_DN                       &trans       &kp H    &kp J     &kp K    &kp L   &trans
    &trans    &trans      &trans    &trans      &trans    &kp C_MUTE                  &bootloader      &trans   &trans    &trans   &trans   &trans
                          &trans    &trans                                                                      &trans    &trans
-                                               &trans        &trans                       &reset      &trans
+                                               &trans        &trans                       &trans      &trans
                                                              &trans  &trans  &trans       &trans
                                                              &trans  &trans  &trans       &trans
             >;
