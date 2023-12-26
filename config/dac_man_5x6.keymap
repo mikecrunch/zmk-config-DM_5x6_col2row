@@ -135,8 +135,8 @@
         lower {
             bindings = <
 &kp GRAVE  &kp F1    &kp F2         &kp F3        &kp F4       &kp F5                        &kp F6       &kp F7      &kp F8   &kp F9    &kp F10  &kp F11
-&trans     &trans    &shiftleft     &shiftright   &kp K_NEXT   &kp C_VOL_UP                  &kp K_CALC   &kp KP_NUM  &kp INS  &kp SLCK  &trans   &kp F12
-&trans     &kp LEFT  &kp UP         &kp DOWN      &kp RIGHT    &kp C_VOL_DN                  &trans       &kp H       &kp J    &kp K     &kp L    &trans
+&trans     &trans    &kp UP_ARROW   &kp UP_ARROW  &kp K_NEXT   &kp C_VOL_UP                  &kp K_CALC   &kp KP_NUM  &kp INS  &kp SLCK  &trans   &kp F12
+&trans     &kp LEFT  &kp LEFT       &kp DOWN      &kp RIGHT    &kp C_VOL_DN                  &trans       &kp H       &kp J    &kp K     &kp L    &trans
 &trans     &trans    &shiftleft     &shiftright   &cmdoptilnl  &kp C_MUTE                    &bootloader  &trans      &trans   &trans    &trans   &trans
                      &ctrlshitdown  &ctrlshiftup                                                                      &trans   &trans
                                                   &trans       &trans                        &trans       &trans
