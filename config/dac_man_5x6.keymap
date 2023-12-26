@@ -100,8 +100,8 @@
 &kp LCTRL  &kp Z   &kp X     &kp C          &kp V            &kp B                              &kp N        &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp RALT
                    &kp LBKT  &mt LGUI RBKT                                                                               &kp MINUS  &kp EQUAL
                                             &lt 1 BACKSPACE  &lt 1 SPACE                        &lt 2 ENTER  &lt 2 RPAR
-                                                             &kp K_PASTE  &kp LSHIFT  &kp BSPC  &kp PG_UP
-                                                             &kp K_COPY   &kp LG(Z)   &kp DEL   &kp PG_DN
+                                                             &kp LG(V)    &kp LSHIFT  &kp BSPC  &kp PG_UP
+                                                             &kp LG(C)    &kp LG(Z)   &kp DEL   &kp PG_DN
             >;
         };
 
