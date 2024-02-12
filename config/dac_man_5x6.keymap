@@ -157,7 +157,7 @@
                       &kp LBKT  &mt LGUI RBKT                                                                                                   &kp MINUS  &kp EQUAL
                                                &lt 1 BACKSPACE  &lt 1 SPACE                     &mt LEFT_SHIFT RIGHT_PARENTHESIS  &lt 2 RETURN
                                                                 &kp LG(V)    &left      &right  &kp COLON
-                                                                &kp LG(C)    &kp LG(Z)  &cmdL   &kp QUESTION
+                                                                &kp LG(C)    &kp LG(Z)  &cmdL   &kp LS(QUESTION)
             >;
         };
 
