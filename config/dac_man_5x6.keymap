@@ -126,7 +126,8 @@
         chromeback: chromeback {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(LC(TAB))>;
+            bindings = <&none &kp LS(LC(TAB))>, <&macro_press>, <&macro_press>;
+
             label = "CHROMEBACK";
         };
 
@@ -143,6 +144,13 @@
             bindings = <&none &kp LG(L)>;
             label = "CMDL";
         };
+
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "NEW_MACRO";
+        };
     };
 
     keymap {
@@ -150,12 +158,12 @@
 
         default_layer {
             bindings = <
-&kp ESC       &kp N1  &kp N2    &kp N3         &kp NUMBER_4     &kp N5                          &kp N6                            &kp N7        &kp N8     &kp N9     &kp N0         &kp BSPC
-&kp TAB       &kp Q   &kp W     &kp E          &kp R            &kp T                           &kp Y                             &kp U         &kp I      &kp O      &kp P          &kp BSLH
-&language     &kp A   &kp S     &kp D          &kp F            &kp G                           &kp H                             &kp J         &kp K      &kp L      &mt LGUI SEMI  &kp SQT
-&kp LEFT_GUI  &kp Z   &kp X     &kp C          &kp V            &kp B                           &kp N                             &kp M         &kp COMMA  &kp DOT    &kp FSLH       &kp RALT
-                      &kp LBKT  &mt LGUI RBKT                                                                                                   &kp MINUS  &kp EQUAL
-                                               &lt 1 BACKSPACE  &lt 1 SPACE                     &mt LEFT_SHIFT RIGHT_PARENTHESIS  &lt 2 RETURN
+&kp ESC       &kp N1  &kp N2    &kp N3         &kp NUMBER_4     &kp N5                          &kp N6            &kp N7                            &kp N8     &kp N9     &kp N0         &kp BSPC
+&kp TAB       &kp Q   &kp W     &kp E          &kp R            &kp T                           &kp Y             &kp U                             &kp I      &kp O      &kp P          &kp BSLH
+&language     &kp A   &kp S     &kp D          &kp F            &kp G                           &kp H             &kp J                             &kp K      &kp L      &mt LGUI SEMI  &kp SQT
+&kp LEFT_GUI  &kp Z   &kp X     &kp C          &kp V            &kp B                           &kp N             &kp M                             &kp COMMA  &kp DOT    &kp FSLH       &kp RALT
+                      &kp LBKT  &mt LGUI RBKT                                                                                                       &kp MINUS  &kp EQUAL
+                                               &lt 1 BACKSPACE  &lt 1 SPACE                     &lt 2 ENTER       &mt LEFT_SHIFT RIGHT_PARENTHESIS
                                                                 &kp LG(V)    &left      &right  &kp COLON
                                                                 &kp LG(C)    &kp LG(Z)  &cmdL   &kp LS(QUESTION)
             >;
@@ -163,14 +171,14 @@
 
         raise {
             bindings = <
-&kp LA(D)  &kp F1     &kp F2     &kp F3     &kp F4   &kp F5                      &kp F6                 &kp F7  &kp F8     &kp F9     &kp F10      &kp LC(W)
-&trans     &kp LC(F)  &kp LC(A)  &kp LC(E)  &trans   &kp LBKT                    &kp RBKT               &trans  &trans     &trans     &cmdoptilnl  &kp F12
-&trans     &kp HOME   &kp PG_UP  &kp PG_DN  &kp END  &kp LPAR                    &kp RPAR               &focus  &jumpmain  &bookmark  &kp MINUS    &kp PIPE
-&trans     &trans     &trans     &trans     &trans   &trans                      &trans                 &trans  &trans     &trans     &kp FSLH     &kp UNDER
-                      &trans     &kp PSCRN                                                                      &trans     &trans
-                                            &trans   &sys_reset                  &mt LG(RETURN) RETURN  &trans
-                                                     &trans      &trans  &trans  &ctrlshiftup
-                                                     &trans      &trans  &trans  &ctrlshitdown
+&kp LA(D)  &kp F1     &kp F2       &kp F3     &kp F4     &kp F5                        &kp F6                 &kp F7  &kp F8     &kp F9     &kp F10      &kp LC(W)
+&trans     &kp LC(F)  &kp LC(A)    &kp LC(E)  &trans     &kp LBKT                      &kp RBKT               &trans  &trans     &trans     &cmdoptilnl  &kp F12
+&trans     &kp HOME   &kp PG_UP    &kp PG_DN  &kp END    &kp LPAR                      &kp RPAR               &focus  &jumpmain  &bookmark  &kp MINUS    &kp PIPE
+&bookmark  &jumpmain  &focus       &newtab    &closetab  &chromeright                  &trans                 &trans  &trans     &trans     &kp FSLH     &kp UNDER
+                      &chromeback  &cmdL                                                                              &trans     &trans
+                                              &trans     &sys_reset                    &mt LG(RETURN) RETURN  &trans
+                                                         &trans        &trans  &trans  &ctrlshiftup
+                                                         &trans        &trans  &trans  &ctrlshitdown
             >;
         };
 
