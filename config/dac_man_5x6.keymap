@@ -12,8 +12,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <LOWER RAISE>;
-            then-layer = <ADJUST>;
+            if-layers = <2 1>;
+            then-layer = <3>;
         };
     };
 
@@ -171,12 +171,12 @@
 
         raise {
             bindings = <
-&kp LA(D)  &kp F1     &kp F2       &kp F3     &kp F4     &kp F5                        &kp F6                 &kp F7  &kp F8     &kp F9     &kp LC(U)    &kp LC(K)
-&trans     &kp LG(W)  &kp LC(A)    &kp LC(E)  &trans     &kp LBKT                      &kp RBKT               &trans  &trans     &trans     &cmdoptilnl  &kp F12
-&trans     &kp HOME   &kp PG_UP    &kp PG_DN  &kp LG(D)  &kp LPAR                      &kp RPAR               &focus  &jumpmain  &bookmark  &kp MINUS    &kp PIPE
-&bookmark  &jumpmain  &focus       &newtab    &closetab  &chromeright                  &trans                 &trans  &trans     &trans     &kp FSLH     &kp UNDER
-                      &chromeback  &cmdL                                                                              &trans     &trans
-                                              &trans     &sys_reset                    &mt LG(RETURN) RETURN  &trans
+&kp LA(D)  &kp F1     &kp F2       &kp F3     &kp F4     &kp F5                        &kp F6         &kp F7  &kp F8     &kp F9     &kp LC(U)    &kp LC(K)
+&trans     &kp LG(W)  &kp LC(A)    &kp LC(E)  &trans     &kp LBKT                      &kp RBKT       &trans  &trans     &trans     &cmdoptilnl  &kp F12
+&trans     &kp HOME   &kp PG_UP    &kp PG_DN  &kp LG(D)  &kp LPAR                      &kp RPAR       &focus  &jumpmain  &bookmark  &kp MINUS    &kp PIPE
+&bookmark  &jumpmain  &focus       &newtab    &closetab  &chromeright                  &trans         &trans  &trans     &trans     &kp FSLH     &kp UNDER
+                      &chromeback  &cmdL                                                                      &trans     &trans
+                                              &trans     &sys_reset                    &trans         &trans
                                                          &trans        &trans  &trans  &ctrlshiftup
                                                          &trans        &trans  &trans  &ctrlshitdown
             >;
@@ -195,16 +195,16 @@
             >;
         };
 
-        adjust {
+        layer_4 {
             bindings = <
-&bt BT_CLR  &trans        &trans        &trans        &trans        &trans                        &trans        &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans      &trans        &trans        &trans        &trans        &trans                        &trans        &trans        &trans        &trans        &trans        &trans
-&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &trans
-&trans      &trans        &trans        &trans        &trans        &trans                        &trans        &trans        &trans        &trans        &trans        &trans
-                          &trans        &trans                                                                                &trans        &trans
-                                                      &trans        &trans                        &trans        &trans
-                                                                    &bootloader   &trans  &trans  &bootloader
-                                                                    &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &bt BT_NXT                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans                                                      &trans  &trans
+                                &trans  &trans                      &trans  &trans
+                                        &trans      &trans  &trans  &trans
+                                        &trans      &trans  &trans  &trans
             >;
         };
     };
